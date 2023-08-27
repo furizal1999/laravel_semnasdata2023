@@ -256,19 +256,19 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item" align="center">
                     <img src="{{ asset("templates") }}/assets/img/nadiem.png" class="testimonial-img p-2 m-2" alt="">
-                    <h3>Nadiem Anwar Makarim, B.A., M.B.A.</h3>
-                    <h4>Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi</h4>
+                    <h3>Herman, S.Kom., M.Sc., Ph.D.</h3>
+                    <h4>Data Scientist dan Dosen Universitas Ahmad Dahlan</h4>
                   </div>
                 </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
+                {{-- <div class="swiper-slide">
                   <div class="testimonial-item" align="center">
                     <img src="{{ asset("templates") }}/assets/img/mahfud-md.jpeg" class="testimonial-img p-2 m-2" alt="">
                     <h3>Prof. Dr. Mohammad Mahfud MD., S.H., S.U., M.I.P.</h3>
                     <h4>Menteri Koordinator Bidang Politik, Hukum, dan Keamanan Republik Indonesia</h4>
                    
                   </div>
-                </div><!-- End testimonial item -->
+                </div><!-- End testimonial item --> --}}
 
               </div>
               <div class="swiper-pagination"></div>
