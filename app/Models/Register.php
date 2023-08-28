@@ -24,23 +24,28 @@ class Register extends Model
         return $result;
     }
 
-    function getUser($email){
-        $data = DB::table('tb_user')
-            ->where("email", "=", $email)
-            ->where("account_status", "=", "Active")
-            ->first();
-        return $data;
-	}
+    function accountRegister($data){
+        $hash = password_hash($data['password'], PASSWORD_DEFAULT);
+        $result = DB::table('akun')
+            ->insert([
+                'username' => $data['email'],
+                'password' => $hash,
+                'level' => $data['level'],
+                'status' => "Y",
+            ]);
+        return $result;
+    }
 
-    function selectRequest($lamp_to){
-        $data = DB::table('tb_light_status')
-            ->where("status_data", "=", "Available")
-            ->where("lamp_to", "=", $lamp_to)
-            ->orderby('id_light_status', 'desc')->first();
-        if($data){
-            return $data->lamp_status;
-        }else{
-            return 0;
-        }
-	}
+
+    // function selectRequest($lamp_to){
+    //     $data = DB::table('tb_light_status')
+    //         ->where("status_data", "=", "Available")
+    //         ->where("lamp_to", "=", $lamp_to)
+    //         ->orderby('id_light_status', 'desc')->first();
+    //     if($data){
+    //         return $data->lamp_status;
+    //     }else{
+    //         return 0;
+    //     }
+	// }
 }

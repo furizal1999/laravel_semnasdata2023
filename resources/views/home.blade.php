@@ -1,39 +1,9 @@
 @include('layout.header')
+@include('layout.menu')
 @php
     $deskripsi = "Seminar Nasional Data Science dan Business Plan Competition 2023";
 @endphp
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <div class="logo">
-        <!-- Uncomment below if you prefer to use an text logo -->
-        <h1><a href="#">Seminar Nasional</a></h1>
-        {{-- <a href="index.html"><img src="{{ asset("templates") }}/assets/img/logo.png" alt="" class="img-fluid"></a> --}}
-      </div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Keynote</a></li>
-          <li><a class="nav-link scrollto" href="#why-us">Kelas</a></li>
-          <li><a class="nav-link scrollto" href="#team">Daftar</a></li>
-          <li><a class="nav-link scrollto" href="#sponsor">Sponsor</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- #header -->
-  {{-- @if ($errors->any())
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-      </div>
-  @endif --}}
+  
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="clearfix">
     <div class="container" data-aos="fade-up">
@@ -183,7 +153,6 @@
                             </div>
                         </div>
                     </div>        
-
                   </div> </div>
                   <!-- end card -->
               </div>
@@ -222,7 +191,8 @@
               <div class="card-body">
                 <h5 class="card-title">Business Plan</h5>
                 <p class="card-text">Peserta Business Plan Competition adalah mahasiswa dan umum yang terdiri max 5 peserta dalam 1 team ide bisnis (1 ketua dan 4 Anggota).</p>
-                <a href="#team" class="readmore">Daftar</a>
+                <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#akunModal">Daftar Akun</a> ||
+                <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</a>
               </div>
             </div>
           </div>
@@ -325,5 +295,22 @@
     }
     ?>
 
+  @if($errors->any())
+        @php
+            $temp = "";
+            $temp .= "<ul>";
+            foreach ($errors->all() as $error){
+                $temp .= "<li>".$error."</li>";
+            }
+            $temp .= "</ul>";
+        @endphp
+
+       <script>
+            swal("Opss!", "<?php echo $temp; ?>", "error");
+        </script>
+  @endif
+
   @include('modal.modal_registrasi')
+  @include('modal.modal_login')
+  @include('modal.modal_registrasi_akun')
   @include('layout.footer')

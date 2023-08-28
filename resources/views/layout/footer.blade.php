@@ -13,13 +13,13 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Link Lain</h4>
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">Latar Belakang</a></li>
-                <li><a href="#testimonials">Keynote</a></li>
-                <li><a href="#why-us">Pendaftaran</a></li>
-                <li><a href="#team">Timelines</a></li>
-                <li><a href="#sponsor">Sponsor</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <li><a href="{{ url('/guest/home') }}#hero">Home</a></li>
+                <li><a href="{{ url('/guest/home') }}#about">Latar Belakang</a></li>
+                <li><a href="{{ url('/guest/home') }}#testimonials">Keynote</a></li>
+                <li><a href="{{ url('/guest/home') }}#why-us">Pendaftaran</a></li>
+                <li><a href="{{ url('/guest/home') }}#team">Timelines</a></li>
+                <li><a href="{{ url('/guest/home') }}#sponsor">Sponsor</a></li>
+                <li><a href="{{ url('/guest/home') }}#contact">Kontak</a></li>
             </ul>
           </div>
 

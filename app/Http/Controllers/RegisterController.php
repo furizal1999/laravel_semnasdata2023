@@ -40,32 +40,17 @@ class RegisterController extends Controller
         }
     }
 
-    // function login(Request $request){
-    //     $row = $this->login->getUser($request->email);
-    //     if($row){
-    //         if($row->account_status=="Active"){
-    //             if(password_verify($request->password, $row->password)){
-    //                 Session::put('login_smartlight', true);
-    //                 Session::put('user_id', $row->user_id);
-    //                 Session::put('email', $row->email);
-    //                 Session::put('name', $row->name);
-    //                 Session::put('sex', $row->sex);
-    //                 Session::put('created_at', $row->created_at);
-    //                 return redirect(route("user.control.light"));
-    //                 exit;
-    //             }else{
-    //                 return redirect(route("user.auth"))->with(['alertclass' => "danger"])->with(['message' => "Maaf, password tidak sesuai"]);
-    //             }
-    //         }else{
-    //             return redirect(route("user.auth"))->with(['alertclass' => "danger"])->with(['message' => "Maaf, Akun anda sedang tidak aktif!"]);
-    //         }
-    //     }else{
-    //         return redirect(route("user.auth"))->with(['alertclass' => "danger"])->with(['message' => "Maaf, username yang anda masukkan salah!"]);
-    //     }
-    // }
-
-    // function logout(){
-    //     Session::flush();
-    //     return redirect(route('user.auth'));
-    // }
+    function accountRegister(Request $request){
+         $data = $request->validate([
+            'email' => 'required|string|max:255',
+            'password' => 'required|min:8',
+            'konf_password' => 'required|min:8|same:password',
+            'level' => 'required',
+        ]);
+        if($this->register->accountRegister($data)){
+            return redirect(route("guest.home"))->with(['notif' => "success", 'message' => "Selamat, akun Anda berhasil didaftarkan. Silahkan login untuk mendaftar business plan competition!"]);
+        }else{
+            return redirect(route("guest.home"))->with(['notif' => "danger", 'message' => "Maaf, pendaftaran akun Anda gagal. Silahkan coba lagi!"]);
+        }
+    }
 }
