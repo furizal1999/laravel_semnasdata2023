@@ -125,7 +125,7 @@
                         <form action="{{ route('businessplan.home.submit') }}" method="post">
                           @csrf
                           <label for="">Jika pengajuan anda sudah siap, silahkan tekan tombol submit dibawah ini untuk menyerahkan. Setelah diserahkan, pengajuan anda tidak dapat diubah lagi.</label>
-                          <input type="text" name="id_peserta_bpc" value="{{ $getBpcData->id_peserta_bpc }}">
+                          <input type="hidden" name="id_peserta_bpc" value="{{ $getBpcData->id_peserta_bpc }}">
                           <button class="btn btn-success btn-sm" type="submit" name="bpc_submit" value="yes"><i class="fa fa-check-circle"></i> Submit</button>
                         </form>
                       @endif

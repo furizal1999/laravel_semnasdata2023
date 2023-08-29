@@ -32,7 +32,7 @@ class DashboardBusinessPlanController extends Controller
                 'nama_tim' => ['required'],
                 'nama_bisnis' => ['required'],
                 'nama_ketua' => ['required'],
-                'nik_ketua' => ['required'],
+                'nik_ketua' => ['required', 'digits:16'],
                 'asal_pt_ketua' => ['required'],
                 'prodi_ketua' => ['required'],
                 'nomor_wa_ketua' => ['required', 'numeric'],
