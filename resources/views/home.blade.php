@@ -191,8 +191,14 @@
               <div class="card-body">
                 <h5 class="card-title">Business Plan</h5>
                 <p class="card-text">Peserta Business Plan Competition adalah mahasiswa dan umum yang terdiri max 5 peserta dalam 1 team ide bisnis (1 ketua dan 4 Anggota).</p>
-                <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#akunModal">Daftar Akun</a> ||
-                <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</a>
+                
+                @if (!Session::get('username'))
+                    <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#akunModal">Daftar Akun</a> 
+                    ||
+                    <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</a>
+                @else
+                  <a class="text-success">Anda sudah login sebagai {{ Session::get("username") }}!</a>
+                @endif
               </div>
             </div>
           </div>

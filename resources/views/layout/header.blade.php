@@ -25,8 +25,8 @@
   <meta property="og:image" content="{{ asset("templates") }}/assets/img/logo/semnasdata_logo.png" />
 
   <!-- Favicons -->
-  <link href="{{ asset("templates") }}/assets/img/favicon.png" rel="icon">
-  <link href="{{ asset("templates") }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset("templates") }}/assets/img/logo/semnasdata_logo.png" rel="icon">
+  <link href="{{ asset("templates") }}/assets/img/logo/semnasdata_logo.png" rel="apple-touch-icon">
 
     <!-- Sweet alert2 CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css" rel="stylesheet">

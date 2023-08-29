@@ -2,21 +2,7 @@
 @include('layout.menu')
 @php
     $deskripsi = "Seminar Nasional Data Science dan Business Plan Competition 2023";
-    // if(!$getBpcData){
-    //   $getBpcData->nama_tim  = "";
-    //   $getBpcData->nama_bisnis = "";
-    //   $getBpcData->nama_ketua = "";
-    //   $getBpcData->nik_ketua = "";
-    //   $getBpcData->asal_pt_ketua = "";
-    //   $getBpcData->prodi_ketua = "";
-    //   $getBpcData->anggota = "";
-    //   $getBpcData->nomor_wa_ketua = "";
-    //   $getBpcData->ringkasan_ide_bisnis = "";
-    //   $getBpcData->qrcode_bpc = "";
-    //   $getBpcData->file_proposal = "";
-    // }
 @endphp
-  
 
   <main id="main">
     <!-- ======= About Section ======= -->
@@ -90,15 +76,15 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="file_proposal" class="col-sm-4 col-form-label">File Proposal</label>
+                                <label for="file_proposal" class="col-sm-4 col-form-label">File Proposal <b class="text-danger">*.pdf</b></label>
                                 <div class="col-sm-8">
                                   <div class="row" align="left">
                                     <div class="col-sm-9">
-                                      <input type="file" name="file_proposal" class="form-control" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_proposal) || (isset($getBpcData->file_proposal) && $getBpcData->file_proposal==NULL)){ echo "required"; } @endphp>
+                                      <input type="file" name="file_proposal" class="form-control" accept=".pdf" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_proposal) || (isset($getBpcData->file_proposal) && $getBpcData->file_proposal==NULL)){ echo "required"; } @endphp>
                                     </div>
                                     <div class="col-sm-2">
                                       @if (isset($getBpcData->file_proposal) && $getBpcData->file_proposal!=NULL)
-                                        <a href="{{ url('storage/public/img/proposal').$getBpcData->file_proposal }}" class="btn btn-success" target="_BLANK"><i class="fas fa-eye"></i></a>
+                                        <a href="{{ asset(env('FOLDER_ASSET').'img/proposal').'/'.$getBpcData->file_proposal }}" class="btn btn-success" target="_BLANK"><i class="fas fa-eye"></i></a>
                                       @endif
                                     </div>
                                   </div>
@@ -109,10 +95,17 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <hr>
-                                    @if (!isset($getBpcData->status_submit) || (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft"))
+                                    @php
+                                        date_default_timezone_set('Asia/Jakarta');
+                                        $now = new DateTime(); // Waktu saat ini
+                                        $targetDate = new DateTime("2023-09-16 23:59:59"); // Tanggal target
+                                    @endphp
+                                    @if (($now > $targetDate) && $getBpcData->status_submit!="Submit")
+                                      <small>Info: <i class="text-white bg-danger rounded p-2">Pendaftaran sudah berakhir.</i></small>
+                                    @elseif (!isset($getBpcData->status_submit) || (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft"))
                                       <button class="btn btn-primary btn-sm" type="submit" name="bpc_register" value="yes"><i class="fa fa-save"></i> Draft</button>
                                     @else
-                                      <small>Info: <i class="text-white bg-success rounded p-2">Proposal anda sudah diajukan!</i></small>
+                                      <small>Info: <i class="text-white bg-success rounded p-2">Proposal anda sudah diajukan.</i></small>
                                     @endif
                                 </div>
                             </div>
@@ -120,7 +113,7 @@
                         </div>
                       </form>
                       
-                      @if (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft")
+                      @if ((isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft") && !(($now > $targetDate) && $getBpcData->status_submit!="Submit"))
                         <hr>
                         <form action="{{ route('businessplan.home.submit') }}" method="post">
                           @csrf

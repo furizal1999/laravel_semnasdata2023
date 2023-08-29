@@ -37,7 +37,7 @@ Route::controller(App\Http\Controllers\RegisterController::class)->group(functio
     // Route::post('/insert-request/{id_guest}/{lamp_to}/{lamp_status}/{status_data}', 'insertRequest')->name("guest.control.light.insert");
 });
 
-Route::controller(App\Http\Controllers\DashboardBusinessPlanController::class)->group(function (){
+Route::controller(App\Http\Controllers\DashboardBusinessPlanController::class)->middleware("checkuseraccess")->group(function (){
     Route::get('/businessplan/home', 'index')->name("businessplan.home");
     Route::post('/businessplan/home/register', 'bpcRegister')->name("businessplan.home.register");
     Route::post('/businessplan/home/submit', 'bpcSubmit')->name("businessplan.home.submit");

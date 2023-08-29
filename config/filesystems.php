@@ -36,6 +36,28 @@ return [
             'throw' => false,
         ],
 
+        'hosting' => [
+            'driver' => 'local',
+            'root' => public_path().'/../../../public_html/'.env('FOLDER_IN_PUBLIC_HTML').'/storage',
+            'url' => $_SERVER['DOCUMENT_ROOT'].'/storage/public',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        // 'hosting' => [
+        //     'driver' => 'local',
+        //     // 'root' => public_path().'/../../../public_html/'.env('FOLDER_IN_PUBLIC_HTML').'/storage',
+            
+        //     // 'root' => $_SERVER['DOCUMENT_ROOT'].'/main_storage'.'/storage',
+        //     'root' => $_SERVER['DOCUMENT_ROOT'].'/storage',
+        //     // 'url' => env('APP_URL').'/main_storage/storage/public',
+        //     // 'url' => $_SERVER['DOCUMENT_ROOT'].'/main_storage'.'/storage/public',
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        // ],
+            
+        
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

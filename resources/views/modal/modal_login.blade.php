@@ -24,7 +24,7 @@
                     <div class="form-group row">
                         <label for="password" class="col-sm-4 col-form-label"></label>
                         <div class="col-sm-8">
-                            <button class="btn btn-danger btn-sm" type="reset"><i class="fa fa-times"></i> Batal</button>
+                            <button class="btn btn-danger btn-sm" type="reset"><i class="fa fa-times"></i> Reset</button>
                             <button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user"></i> Login</button>
                         </div>
                     </div>
