@@ -14,4 +14,23 @@ class Home extends Model
             ->first();
         return $data;
 	}
+
+    function getBpcData($id_akun){
+        $data = DB::table('akun')
+            ->join('peserta_bpc', 'peserta_bpc.id_akun', '=', 'akun.id_akun')
+            ->where("akun.id_akun", "=", $id_akun)
+            ->orderby('peserta_bpc.id_peserta_bpc', 'desc')
+            ->first();
+        return $data;
+	}
+
+    function checkDraft($id_akun){
+        $data = DB::table('akun')
+            ->join('peserta_bpc', 'peserta_bpc.id_akun', '=', 'akun.id_akun')
+            ->where("akun.id_akun", "=", $id_akun)
+            ->count();
+        return $data;
+	}
+
+    
 }

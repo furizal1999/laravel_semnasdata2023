@@ -2,6 +2,19 @@
 @include('layout.menu')
 @php
     $deskripsi = "Seminar Nasional Data Science dan Business Plan Competition 2023";
+    // if(!$getBpcData){
+    //   $getBpcData->nama_tim  = "";
+    //   $getBpcData->nama_bisnis = "";
+    //   $getBpcData->nama_ketua = "";
+    //   $getBpcData->nik_ketua = "";
+    //   $getBpcData->asal_pt_ketua = "";
+    //   $getBpcData->prodi_ketua = "";
+    //   $getBpcData->anggota = "";
+    //   $getBpcData->nomor_wa_ketua = "";
+    //   $getBpcData->ringkasan_ide_bisnis = "";
+    //   $getBpcData->qrcode_bpc = "";
+    //   $getBpcData->file_proposal = "";
+    // }
 @endphp
   
 
@@ -11,89 +24,113 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form method="post" action="{{ route('guest.register.account') }}">
-              @csrf
               <div class="card" style="margin: 50px 0px">
                   <div class="card-header">
                       Daftar Business Plan Competition
                   </div>
                   <div class="card-body">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                              <label for="nama_tim" class="col-sm-4 col-form-label">Nama Tim</label>
-                              <div class="col-sm-8">
-                              <input type="text" name="nama_tim" class="form-control" id="nama_tim" placeholder="Nama Tim" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
+                      <form method="post" action="{{ route('businessplan.home.register') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="nama_tim" class="col-sm-4 col-form-label">Nama Tim</label>
+                                <div class="col-sm-8">
+                                <input type="text" name="nama_tim" value="<?php if(isset($getBpcData->nama_tim)){echo $getBpcData->nama_tim; } ?>" class="form-control" id="nama_tim" placeholder="Nama Tim" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nama_bisnis" class="col-sm-4 col-form-label">Nama Bisnis</label>
+                                <div class="col-sm-8">
+                                <input type="text" name="nama_bisnis" value="<?php if(isset($getBpcData->nama_bisnis)){echo $getBpcData->nama_bisnis; } ?>" class="form-control" id="nama_bisnis" placeholder="Nama Bisnis" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nama_ketua" class="col-sm-4 col-form-label">Nama Ketua</label>
+                                <div class="col-sm-8">
+                                <input type="text" name="nama_ketua" value="<?php if(isset($getBpcData->nama_ketua)){echo $getBpcData->nama_ketua; } ?>" class="form-control" id="nama_ketua" placeholder="Nama Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nik_ketua" class="col-sm-4 col-form-label">NIK Ketua</label>
+                                <div class="col-sm-8">
+                                <input type="number" name="nik_ketua" value="<?php if(isset($getBpcData->nik_ketua)){echo $getBpcData->nik_ketua; } ?>" class="form-control" id="nik_ketua" placeholder="NIK Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="asal_pt_ketua" class="col-sm-4 col-form-label">Asal Perguruan Tinggi Ketua</label>
+                                <div class="col-sm-8">
+                                <input type="text" name="asal_pt_ketua" value="<?php if(isset($getBpcData->asal_pt_ketua)){echo $getBpcData->asal_pt_ketua; } ?>" class="form-control" id="asal_pt_ketua" placeholder="Asal Perguruan Tinggi Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="prodi_ketua" class="col-sm-4 col-form-label">Asal Program Studi Ketua</label>
+                                <div class="col-sm-8">
+                                <input type="text" name="prodi_ketua" value="<?php if(isset($getBpcData->prodi_ketua)){echo $getBpcData->prodi_ketua; } ?>" class="form-control" id="prodi_ketua" placeholder="Asal Prodi Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nomor_wa_ketua" class="col-sm-4 col-form-label">Nomor WA Ketua</label>
+                                <div class="col-sm-8">
+                                <input type="number" name="nomor_wa_ketua" value="<?php if(isset($getBpcData->nomor_wa_ketua)){echo $getBpcData->nomor_wa_ketua; } ?>" class="form-control" id="nomor_wa_ketua" placeholder="Nomor WA Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
+                                </div>
+                            </div>
                           </div>
-                          <div class="form-group row">
-                              <label for="nama_bisnis" class="col-sm-4 col-form-label">Nama Bisnis</label>
-                              <div class="col-sm-8">
-                              <input type="text" name="nama_bisnis" class="form-control" id="nama_bisnis" placeholder="Nama Bisnis" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="nama_ketua" class="col-sm-4 col-form-label">Nama Ketua</label>
-                              <div class="col-sm-8">
-                              <input type="text" name="nama_ketua" class="form-control" id="nama_ketua" placeholder="Nama Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="nik_ketua" class="col-sm-4 col-form-label">NIK Ketua</label>
-                              <div class="col-sm-8">
-                              <input type="number" name="nik_ketua" class="form-control" id="nik_ketua" placeholder="NIK Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="asal_pt_ketua" class="col-sm-4 col-form-label">Asal Perguruan Tinggi Ketua</label>
-                              <div class="col-sm-8">
-                              <input type="text" name="asal_pt_ketua" class="form-control" id="asal_pt_ketua" placeholder="Asal Perguruan Tinggi Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="prodi_ketua" class="col-sm-4 col-form-label">Asal Perguruan Tinggi Ketua</label>
-                              <div class="col-sm-8">
-                              <input type="number" name="prodi_ketua" class="form-control" id="prodi_ketua" placeholder="Asal Prodi Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="wa_ketua" class="col-sm-4 col-form-label">Nomor WA Ketua</label>
-                              <div class="col-sm-8">
-                              <input type="number" name="wa_ketua" class="form-control" id="wa_ketua" placeholder="Nomor WA Ketua" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="anggota" class="col-sm-4 col-form-label">Anggota</label>
+                                <div class="col-sm-8">
+                                  <textarea name="anggota" class="form-control" id="" cols="30" rows="6"><?php if(isset($getBpcData->anggota)){echo $getBpcData->anggota; } ?></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ringkasan_ide_bisnis" class="col-sm-4 col-form-label">Ringkasan Ide Bisnis</label>
+                                <div class="col-sm-8">
+                                  <textarea name="ringkasan_ide_bisnis" class="form-control" id="" cols="30" rows="6"><?php if(isset($getBpcData->ringkasan_ide_bisnis)){echo $getBpcData->ringkasan_ide_bisnis; } ?></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="file_proposal" class="col-sm-4 col-form-label">File Proposal</label>
+                                <div class="col-sm-8">
+                                  <div class="row" align="left">
+                                    <div class="col-sm-9">
+                                      <input type="file" name="file_proposal" class="form-control" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_proposal) || (isset($getBpcData->file_proposal) && $getBpcData->file_proposal==NULL)){ echo "required"; } @endphp>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      @if (isset($getBpcData->file_proposal) && $getBpcData->file_proposal!=NULL)
+                                        <a href="{{ url('storage/public/img/proposal').$getBpcData->file_proposal }}" class="btn btn-success" target="_BLANK"><i class="fas fa-eye"></i></a>
+                                      @endif
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                </div>
+                                <div class="col-sm-8">
+                                    <hr>
+                                    @if (!isset($getBpcData->status_submit) || (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft"))
+                                      <button class="btn btn-primary btn-sm" type="submit" name="bpc_register" value="yes"><i class="fa fa-save"></i> Draft</button>
+                                    @else
+                                      <small>Info: <i class="text-white bg-success rounded p-2">Proposal anda sudah diajukan!</i></small>
+                                    @endif
+                                </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                              <label for="anggota" class="col-sm-4 col-form-label">Anggota</label>
-                              <div class="col-sm-8">
-                                <textarea name="anggota" class="form-control" id="" cols="30" rows="6"></textarea>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="ringkasan_ide" class="col-sm-4 col-form-label">Ringkasan Ide Bisnis</label>
-                              <div class="col-sm-8">
-                                <textarea name="ringkasan_ide" class="form-control" id="" cols="30" rows="6"></textarea>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="file_proposal" class="col-sm-4 col-form-label">File Proposal</label>
-                              <div class="col-sm-8">
-                              <input type="file" name="file_proposal" class="form-control" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" required>
-                              </div>
-                          </div>
-                          <div class="form-group row">
-                              <label for="password" class="col-sm-4 col-form-label"></label>
-                              <div class="col-sm-8">
-                                  <button class="btn btn-danger btn-sm" type="reset"><i class="fa fa-times"></i> Reset</button>
-                                  <button class="btn btn-success btn-sm" type="submit"><i class="fa fa-save"></i> Daftar Business Plan</button>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
+                      </form>
+                      
+                      @if (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft")
+                        <hr>
+                        <form action="{{ route('businessplan.home.submit') }}" method="post">
+                          @csrf
+                          <label for="">Jika pengajuan anda sudah siap, silahkan tekan tombol submit dibawah ini untuk menyerahkan. Setelah diserahkan, pengajuan anda tidak dapat diubah lagi.</label>
+                          <input type="text" name="id_peserta_bpc" value="{{ $getBpcData->id_peserta_bpc }}">
+                          <button class="btn btn-success btn-sm" type="submit" name="bpc_submit" value="yes"><i class="fa fa-check-circle"></i> Submit</button>
+                        </form>
+                      @endif
                   </div>
               </div>
-          </form>
           </div>
         </div>
       </div>

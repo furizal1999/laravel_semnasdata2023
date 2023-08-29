@@ -39,6 +39,8 @@ Route::controller(App\Http\Controllers\RegisterController::class)->group(functio
 
 Route::controller(App\Http\Controllers\DashboardBusinessPlanController::class)->group(function (){
     Route::get('/businessplan/home', 'index')->name("businessplan.home");
+    Route::post('/businessplan/home/register', 'bpcRegister')->name("businessplan.home.register");
+    Route::post('/businessplan/home/submit', 'bpcSubmit')->name("businessplan.home.submit");
 });
 
 

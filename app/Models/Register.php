@@ -24,6 +24,58 @@ class Register extends Model
         return $result;
     }
 
+    function bpcRegister($data, $file, $id_akun){
+        $result = DB::table('peserta_bpc')
+            ->insert([
+                'nama_tim' => $data['nama_tim'],
+                'nama_bisnis' => $data['nama_bisnis'],
+                'nama_ketua' => $data['nama_ketua'],
+                'nik_ketua' => $data['nik_ketua'],
+                'asal_pt_ketua' => $data['asal_pt_ketua'],
+                'prodi_ketua' => $data['prodi_ketua'],
+                'anggota' => $data['anggota'],
+                'nomor_wa_ketua' => $data['nomor_wa_ketua'],
+                'ringkasan_ide_bisnis' => $data['ringkasan_ide_bisnis'],
+                'qrcode_bpc' => '',
+                'file_proposal' => $file,
+                'id_akun' => $id_akun,
+                'status_submit' => "Draft",
+            ]);
+        return $result;
+    }
+
+    
+    function updateDraft($data, $file, $id_peserta_bpc){
+        // dd($id_peserta_bpc);
+        $result = DB::table('peserta_bpc')
+            ->where("id_peserta_bpc", $id_peserta_bpc)
+            ->where("status_submit", "Draft")
+            ->update([
+                'nama_tim' => $data['nama_tim'],
+                'nama_bisnis' => $data['nama_bisnis'],
+                'nama_ketua' => $data['nama_ketua'],
+                'nik_ketua' => $data['nik_ketua'],
+                'asal_pt_ketua' => $data['asal_pt_ketua'],
+                'prodi_ketua' => $data['prodi_ketua'],
+                'anggota' => $data['anggota'],
+                'nomor_wa_ketua' => $data['nomor_wa_ketua'],
+                'ringkasan_ide_bisnis' => $data['ringkasan_ide_bisnis'],
+                'qrcode_bpc' => '',
+                'file_proposal' => $file,
+            ]);
+            
+        return $result;
+    }
+
+    function submitBpc($id_peserta_bpc){
+        $result = DB::table('peserta_bpc')
+            ->where("id_peserta_bpc", $id_peserta_bpc)
+            ->update([
+                'status_submit' => 'Submit',
+            ]);
+        return $result;
+    }
+
     function accountRegister($data){
         $hash = password_hash($data['password'], PASSWORD_DEFAULT);
         $result = DB::table('akun')
@@ -35,17 +87,4 @@ class Register extends Model
             ]);
         return $result;
     }
-
-
-    // function selectRequest($lamp_to){
-    //     $data = DB::table('tb_light_status')
-    //         ->where("status_data", "=", "Available")
-    //         ->where("lamp_to", "=", $lamp_to)
-    //         ->orderby('id_light_status', 'desc')->first();
-    //     if($data){
-    //         return $data->lamp_status;
-    //     }else{
-    //         return 0;
-    //     }
-	// }
 }
