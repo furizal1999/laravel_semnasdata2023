@@ -138,7 +138,7 @@
                                       <b class="text-danger">Info:</b><br>
                                       <ul>
                                         <li><small><i class="text-white bg-success rounded p-1">Proposal anda sudah diajukan.</i></small></li>
-                                        <li><small>Silahkan join ke dalam <a href="https://chat.whatsapp.com/K0ePEguknoyA0ZiI4DSTSn">WhatsApp Group</a> untuk informasi selanjutnya.</small></li>
+                                        <li><small>Silahkan join ke dalam <a href="https://chat.whatsapp.com/K0ePEguknoyA0ZiI4DSTSn" target="_BLANK">WhatsApp Group</a> untuk informasi selanjutnya.</small></li>
                                       </ul>
                                     @endif
                                 </div>

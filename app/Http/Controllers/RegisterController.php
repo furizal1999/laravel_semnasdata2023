@@ -34,12 +34,12 @@ class RegisterController extends Controller
             'keikutsertaan' => 'required',
         ]);
         if($this->register->seminarRegister($data)){
-            return redirect(route("guest.home"))->with(['notif' => "success", 'message' => "Selamat, pendaftaran berhasil. Panitia akan memverifikasi data anda dan mengundang anda bergabung di WA group!"]);
+            return redirect(route("guest.home"))->with(['notif' => "success", 'message' => 'Selamat, pendaftaran berhasil. Silahkan join ke <a class="btn btn-success" href="https://chat.whatsapp.com/FywqXwprixG1s6XTcha9wV">WhatsApp group</a> untuk informasi lebih lanjut.']);
         }else{
             return redirect(route("guest.home"))->with(['notif' => "danger", 'message' => "Maaf, pendaftaran gagal. Silahkan coba lagi!"]);
         }
     }
-
+    
     function accountRegister(Request $request){
          $data = $request->validate([
             'email' => 'required|string|max:255',
