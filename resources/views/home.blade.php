@@ -54,6 +54,13 @@
           <div class="col-lg-8">
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
               <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                  <div class="testimonial-item" align="center">
+                    <img src="{{ asset("templates") }}/assets/img/speakers/juan.jpeg" class="testimonial-img p-2 m-2" alt="">
+                    <h3>Juan Kanggrawan, M.Sc., Ph.D.</h3>
+                    <h4>Head of Data Analytics Jakarta Smart City & MIT School of Online Education</h4>
+                  </div>
+                </div><!-- End testimonial item -->
                 <div class="swiper-slide">
                   <div class="testimonial-item" align="center">
                     <img src="{{ asset("templates") }}/assets/img/speakers/ilham.jpg" class="testimonial-img p-2 m-2" alt="">
@@ -169,6 +176,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>Pendaftaran</h3>
+          <p class="text-white">Sebelum mendaftar, sebaiknya pahami ketentuan dan persyaratan yang berlaku. Kebutuhan dokumen pada kegiatan ini dapat diunduh pada <a href="https://drive.google.com/drive/folders/1x0X1vwT0E5epl3b4W_iafli8tByVn0Q5?usp=drive_link" target="_blank">Google Drive</a></p>
           <hr color="white" width="300px">
         </header>
 
@@ -214,7 +222,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End Why Us Section -->
 

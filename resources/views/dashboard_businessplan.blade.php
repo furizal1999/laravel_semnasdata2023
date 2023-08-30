@@ -80,7 +80,7 @@
                                 <div class="col-sm-8">
                                   <div class="row" align="left">
                                     <div class="col-sm-9">
-                                      <input type="file" name="file_proposal" class="form-control" accept=".pdf" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_proposal) || (isset($getBpcData->file_proposal) && $getBpcData->file_proposal==NULL)){ echo "required"; } @endphp>
+                                      <input type="file" name="file_proposal" class="form-control" accept="application/pdf" id="file_proposal" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_proposal) || (isset($getBpcData->file_proposal) && $getBpcData->file_proposal==NULL)){ echo "required"; } @endphp>
                                     </div>
                                     <div class="col-sm-2">
                                       @if (isset($getBpcData->file_proposal) && $getBpcData->file_proposal!=NULL)
@@ -106,6 +106,21 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="file_surat_pernyataan" class="col-sm-4 col-form-label">Surat Pernyataan Keaslian Ide <b class="text-danger">*.pdf</b></label>
+                                <div class="col-sm-8">
+                                  <div class="row" align="left">
+                                    <div class="col-sm-9">
+                                      <input type="file" name="file_surat_pernyataan" class="form-control" accept="application/pdf" id="file_surat_pernyataan" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_surat_pernyataan) || (isset($getBpcData->file_surat_pernyataan) && $getBpcData->file_surat_pernyataan==NULL)){ echo "required"; } @endphp>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      @if (isset($getBpcData->file_surat_pernyataan) && $getBpcData->file_surat_pernyataan!=NULL)
+                                        <a href="{{ asset(env('FOLDER_ASSET').'img/surat_pernyataan').'/'.$getBpcData->file_surat_pernyataan }}" class="btn btn-success" target="_BLANK"><i class="fas fa-eye"></i></a>
+                                      @endif
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-sm-4">
                                 </div>
                                 <div class="col-sm-8">
@@ -120,7 +135,11 @@
                                     @elseif (!isset($getBpcData->status_submit) || (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft"))
                                       <button class="btn btn-primary btn-sm" type="submit" name="bpc_register" value="yes"><i class="fa fa-save"></i> Draft</button>
                                     @else
-                                      <small>Info: <i class="text-white bg-success rounded p-2">Proposal anda sudah diajukan.</i></small>
+                                      <b class="text-danger">Info:</b><br>
+                                      <ul>
+                                        <li><small><i class="text-white bg-success rounded p-1">Proposal anda sudah diajukan.</i></small></li>
+                                        <li><small>Silahkan join ke dalam <a href="https://chat.whatsapp.com/K0ePEguknoyA0ZiI4DSTSn">WhatsApp Group</a> untuk informasi selanjutnya.</small></li>
+                                      </ul>
                                     @endif
                                 </div>
                             </div>

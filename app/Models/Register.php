@@ -24,7 +24,7 @@ class Register extends Model
         return $result;
     }
 
-    function bpcRegister($data, $file_proposal, $file_bukti_bayar, $id_akun){
+    function bpcRegister($data, $file_proposal, $file_bukti_bayar, $file_surat_pernyataan, $id_akun){
         $result = DB::table('peserta_bpc')
             ->insert([
                 'nama_tim' => $data['nama_tim'],
@@ -39,6 +39,7 @@ class Register extends Model
                 'qrcode_bpc' => '',
                 'file_proposal' => $file_proposal,
                 'file_bukti_bayar' => $file_bukti_bayar,
+                'file_surat_pernyataan' => $file_surat_pernyataan,
                 'id_akun' => $id_akun,
                 'status_submit' => "Draft",
             ]);
@@ -46,7 +47,7 @@ class Register extends Model
     }
 
     
-    function updateDraft($data, $file_proposal, $file_bukti_bayar, $id_peserta_bpc){
+    function updateDraft($data, $file_proposal, $file_bukti_bayar, $file_surat_pernyataan, $id_peserta_bpc){
         // dd($id_peserta_bpc);
         $result = DB::table('peserta_bpc')
             ->where("id_peserta_bpc", $id_peserta_bpc)
@@ -64,6 +65,7 @@ class Register extends Model
                 'qrcode_bpc' => '',
                 'file_proposal' => $file_proposal,
                 'file_bukti_bayar' => $file_bukti_bayar,
+                'file_surat_pernyataan' => $file_surat_pernyataan,
             ]);
             
         return $result;

@@ -40,6 +40,7 @@ class DashboardBusinessPlanController extends Controller
                 'ringkasan_ide_bisnis' => ['required'],
                 'file_proposal' => ['mimes:pdf', 'max:10480'],
                 'file_bukti_bayar' => ['mimes:pdf,jpeg,png,jpg', 'max:10480'],
+                'file_surat_pernyataan' => ['mimes:pdf', 'max:10480'],
             ]);
             $id_akun = Session::get('id_akun');
             if(!isset($data['file_proposal'])){
@@ -89,16 +90,37 @@ class DashboardBusinessPlanController extends Controller
                 finfo_close($finfo);
             }
 
+            if(!isset($data['file_surat_pernyataan'])){
+                $file_surat_pernyataan = $this->home->getBpcData($id_akun)->file_surat_pernyataan;
+            }else{
+                $file = $request->file('file_surat_pernyataan');
+                $file_surat_pernyataan = $file->hashName();
+                $tempName = $file->getPathName();
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $allowedExtensions = ['application/pdf'];
+                $fileExtension = finfo_file($finfo, $tempName);
+                if(!in_array($fileExtension, $allowedExtensions)) {
+                    return redirect(route("businessplan.home"))->with(['notif' => "danger", 'message' => "Maaf, ada masalah dengan file surat pernyataan yang anda pilih. Pastikan bahwa file anda bisa dibuka sebagai file PDF/JPG/PNG/JPEG!"]);
+                }else{
+                    if($file->store('public/img/surat_pernyataan')){
+                        // no action
+                    }else{
+                        return redirect(route("businessplan.home"))->with(['notif' => "danger", 'message' => "Maaf, gagal mengupload surat pernyataan!"]);
+                    }
+                }
+                finfo_close($finfo);
+            }
+            
             if($this->home->checkDraft($id_akun)>0){
                 //editDraft
                 $id_peserta_bpc = $this->home->getBpcData($id_akun)->id_peserta_bpc;
-                if($this->register->updateDraft($data, $file_proposal, $file_bukti_bayar, $id_peserta_bpc)){
+                if($this->register->updateDraft($data, $file_proposal, $file_bukti_bayar, $file_surat_pernyataan, $id_peserta_bpc)){
                     return redirect(route("businessplan.home"))->with(['notif' => "success", 'message' => "Data berhasil disimpan sebagai draft."]);
                 }else{
                     return redirect(route("businessplan.home"))->with(['notif' => "danger", 'message' => "Maaf, data gagal disimpan."]);
                 }
             }else{
-                if($this->register->bpcRegister($data, $file_proposal, $file_bukti_bayar, $id_akun)){
+                if($this->register->bpcRegister($data, $file_proposal, $file_bukti_bayar, $file_surat_pernyataan, $id_akun)){
                     return redirect(route("businessplan.home"))->with(['notif' => "success", 'message' => "Data berhasil disimpan sebagai draft."]);
                 }else{
                     return redirect(route("businessplan.home"))->with(['notif' => "danger", 'message' => "Maaf, data gagal disimpan."]);
