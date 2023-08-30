@@ -91,6 +91,21 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="file_bukti_bayar" class="col-sm-4 col-form-label">Bukti bayar <b class="text-danger">*.pdf, *.jpg, *.jpeg, *.png</b></label>
+                                <div class="col-sm-8">
+                                  <div class="row" align="left">
+                                    <div class="col-sm-9">
+                                      <input type="file" name="file_bukti_bayar" class="form-control" accept="application/pdf, image/jpeg, image/png, image/jpg" id="file_bukti_bayar" placeholder="File Proposal" oninvalid="this.setCustomValidity('Isian Tidak Boleh Kosong')" oninput="setCustomValidity('')" @php if(!isset($getBpcData->file_bukti_bayar) || (isset($getBpcData->file_bukti_bayar) && $getBpcData->file_bukti_bayar==NULL)){ echo "required"; } @endphp>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      @if (isset($getBpcData->file_bukti_bayar) && $getBpcData->file_bukti_bayar!=NULL)
+                                        <a href="{{ asset(env('FOLDER_ASSET').'img/bukti_bayar').'/'.$getBpcData->file_bukti_bayar }}" class="btn btn-success" target="_BLANK"><i class="fas fa-eye"></i></a>
+                                      @endif
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-sm-4">
                                 </div>
                                 <div class="col-sm-8">
