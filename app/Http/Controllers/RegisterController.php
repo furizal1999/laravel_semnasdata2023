@@ -28,8 +28,8 @@ class RegisterController extends Controller
             'nim' => 'required|max:20',
             'wa' => 'required',
             'email' => 'required|email|max:255',
-            // 'nama_pt' => 'required|max:255',
-            // 'prodi' => 'required|max:255',
+            'nama_pt' => 'max:255',
+            'prodi' => 'max:255',
             'alamat' => 'required',
             'keikutsertaan' => 'required',
         ]);
