@@ -153,7 +153,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Seminar</h4>
                                             <p>Pelaksanaan Seminar Nasional dan Presentase Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">12 Okto</span>
+                                            <span class="vertical-timeline-element-date">14 Okto</span>
                                         </div>
                                     </div>
                                 </div>                      
