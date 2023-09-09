@@ -239,7 +239,7 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/sponsor/bukopin-syariah.png" class="img-fluid" alt="">
             </div>
           </div>
 
