@@ -105,7 +105,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Pendaftaran</h4>
                                             <p>Pendaftaran seminar dan Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">28 Agus -<br>16 Sept</span>
+                                            <span class="vertical-timeline-element-date">28 Agus -<br>30 Sept</span>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Seleksi</h4>
                                             <p>Seleksi Administrasi Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">18-23 Sept</span>
+                                            <span class="vertical-timeline-element-date">1 Okto- <br>4 Okto</span>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Pengumuman</h4>
                                             <p>Pengumuman Finalis Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">25 Sept</span>
+                                            <span class="vertical-timeline-element-date">5 Okto</span>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/sponsor/bpr-syariah.png" class="img-fluid" alt="">
             </div>
           </div>
 
