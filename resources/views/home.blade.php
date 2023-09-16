@@ -231,8 +231,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h3>Sponsor</h3>
-          <p>Kami sangat berterima kasih kepada para sponsor yang telah berperan penting dalam kesuksesan acara ini. Berikut ini adalah daftar para sponsor yang telah memberikan dukungan mereka yang luar biasa.</p>
+          <h3>Sponsor dan Media Partner</h3>
+          <p>Kami sangat berterima kasih kepada para sponsor dan media partner yang telah berperan penting dalam kesuksesan acara ini. Berikut ini adalah daftar para sponsor dan media partner yang telah memberikan dukungan mereka yang luar biasa.</p>
         </div>
 
         <div class="row g-0 clients-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
@@ -263,25 +263,25 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-nasional.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-yogya.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/lensa-uad.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/bem-unram.png" class="img-fluid" alt="">
             </div>
           </div>
 
