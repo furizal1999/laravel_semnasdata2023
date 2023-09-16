@@ -176,7 +176,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>Pendaftaran</h3>
-          <p class="text-white">Sebelum mendaftar, sebaiknya pahami ketentuan dan persyaratan yang berlaku. Kebutuhan dokumen pada kegiatan ini dapat diunduh pada <a href="https://drive.google.com/drive/folders/1x0X1vwT0E5epl3b4W_iafli8tByVn0Q5?usp=drive_link" target="_blank">Google Drive</a></p>
+          <p class="text-white">Sebelum mendaftar, sebaiknya pahami ketentuan dan persyaratan yang berlaku. Kebutuhan dokumen pada kegiatan ini dapat diunduh pada <a class="btn btn-warning" href="https://drive.google.com/drive/folders/1x0X1vwT0E5epl3b4W_iafli8tByVn0Q5?usp=drive_link" target="_blank">Google Drive</a></p>
           <hr color="white" width="300px">
         </header>
 
