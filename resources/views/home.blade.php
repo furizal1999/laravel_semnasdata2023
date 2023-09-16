@@ -235,53 +235,77 @@
           <p>Kami sangat berterima kasih kepada para sponsor dan media partner yang telah berperan penting dalam kesuksesan acara ini. Berikut ini adalah daftar para sponsor dan media partner yang telah memberikan dukungan mereka yang luar biasa.</p>
         </div>
 
-        <div class="row g-0 clients-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/sponsor/bukopin-syariah.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/sponsor/bukopin-syariah.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/sponsor/bpr-syariah.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/sponsor/bpr-syariah.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-nasional.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-nasional.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-yogya.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/permikomnas-yogya.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/media/lensa-uad.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/lensa-uad.png" class="" width="150%" alt="">
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/media/bem-unram.png" class="img-fluid" alt="">
+              <img src="{{ asset("templates") }}/assets/img/media/bem-unram.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+           <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+           <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
             </div>
           </div>
 
