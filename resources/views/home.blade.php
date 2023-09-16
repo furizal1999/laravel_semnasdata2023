@@ -263,6 +263,33 @@
 
           <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+           <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
+              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+           <div class="col-lg-3 m-0 mb-4">
+            <div class="client-logo">
               <img src="{{ asset("templates") }}/assets/img/media/permikomnas-nasional.png" class="" width="150%" alt="">
             </div>
           </div>
@@ -282,30 +309,6 @@
           <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
               <img src="{{ asset("templates") }}/assets/img/media/bem-unram.png" class="" width="150%" alt="">
-            </div>
-          </div>
-
-           <div class="col-lg-3 m-0 mb-4">
-            <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 m-0 mb-4">
-            <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
-            </div>
-          </div>
-
-           <div class="col-lg-3 m-0 mb-4">
-            <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 m-0 mb-4">
-            <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
             </div>
           </div>
 
