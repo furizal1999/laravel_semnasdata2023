@@ -130,7 +130,7 @@
                                         $now = new DateTime(); // Waktu saat ini
                                         $targetDate = new DateTime("2023-09-16 23:59:59"); // Tanggal target
                                     @endphp
-                                    @if (($now > $targetDate) && $getBpcData->status_submit!="Submit")
+                                    @if ((($now > $targetDate) && isset($getBpcData->status_submit)) && $getBpcData->status_submit!="Submit")
                                       <small>Info: <i class="text-white bg-danger rounded p-2">Pendaftaran sudah berakhir.</i></small>
                                     @elseif (!isset($getBpcData->status_submit) || (isset($getBpcData->status_submit) && $getBpcData->status_submit=="Draft"))
                                       <button class="btn btn-primary btn-sm" type="submit" name="bpc_register" value="yes"><i class="fa fa-save"></i> Draft</button>
