@@ -128,7 +128,7 @@
                                     @php
                                         date_default_timezone_set('Asia/Jakarta');
                                         $now = new DateTime(); // Waktu saat ini
-                                        $targetDate = new DateTime("2023-09-16 23:59:59"); // Tanggal target
+                                        $targetDate = new DateTime("2023-09-30 23:59:59"); // Tanggal target
                                     @endphp
                                     @if ((($now > $targetDate) && isset($getBpcData->status_submit)) && $getBpcData->status_submit!="Submit")
                                       <small>Info: <i class="text-white bg-danger rounded p-2">Pendaftaran sudah berakhir.</i></small>
