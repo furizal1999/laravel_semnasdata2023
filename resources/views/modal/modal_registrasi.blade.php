@@ -59,7 +59,9 @@
                         <div class="col-sm-8">
                             <select name="keikutsertaan" id="keikutsertaan" class="form-control" @required(true)>
                                 <option value="">--Pilih--</option>
-                                <option value="Offline">Offline</option>
+                                @if ($checkPesertaSeminar<200)
+                                    <option value="Offline">Offline</option>
+                                @endif
                                 <option value="Online">Online</option>
                             </select>
                         </div>

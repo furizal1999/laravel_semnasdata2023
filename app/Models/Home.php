@@ -32,5 +32,11 @@ class Home extends Model
         return $data;
 	}
 
+    function checkPesertaSeminar($keikutsertaan){
+        $data = DB::table('peserta_seminar')
+            ->where("keikutsertaan", "=", $keikutsertaan)
+            ->count();
+        return $data;
+	}
     
 }
