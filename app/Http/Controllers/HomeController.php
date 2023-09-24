@@ -20,8 +20,8 @@ class HomeController extends Controller
     }
 
     function index(Request $request){
-        $data['checkPesertaSeminar'] = $this->home->checkPesertaSeminar("Offline");
-        return view('home', $data);
+        // $data['checkPesertaSeminar'] = $this->home->checkPesertaSeminar("Offline");
+        return view('home');
     } 
 
     function login(Request $request){

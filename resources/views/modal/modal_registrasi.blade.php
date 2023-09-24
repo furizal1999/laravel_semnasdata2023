@@ -59,7 +59,10 @@
                         <div class="col-sm-8">
                             <select name="keikutsertaan" id="keikutsertaan" class="form-control" @required(true)>
                                 <option value="">--Pilih--</option>
-                                @if ($checkPesertaSeminar<200)
+                                @php
+                                    use App\Models\Home;
+                                @endphp
+                                @if (app(Home::class)->checkPesertaSeminar("Offline")<200)
                                     <option value="Offline">Offline</option>
                                 @endif
                                 <option value="Online">Online</option>
