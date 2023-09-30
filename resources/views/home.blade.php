@@ -104,8 +104,8 @@
                                         </span>
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Pendaftaran</h4>
-                                            <p>Pendaftaran seminar dan Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">28 Agus -<br>30 Sept</span>
+                                            <p>Pendaftaran Business Plan Competition</p>
+                                            <span class="vertical-timeline-element-date">28 Agus -<br>5 Okto</span>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Seleksi</h4>
                                             <p>Seleksi Administrasi Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">1 Okto- <br>4 Okto</span>
+                                            <span class="vertical-timeline-element-date">6 Okto- <br>8 Okto</span>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Pengumuman</h4>
                                             <p>Pengumuman Finalis Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">5 Okto</span>
+                                            <span class="vertical-timeline-element-date">9 Okto</span>
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +141,19 @@
                                         <div class="vertical-timeline-element-content bounce-in">
                                             <h4 class="timeline-title">Technical Meeting</h4>
                                             <p>Pelaksanaan Technical Meeting Business Plan Competition</p>
-                                            <span class="vertical-timeline-element-date">9 Okto</span>
+                                            <span class="vertical-timeline-element-date">10 Okto</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vertical-timeline-item vertical-timeline-element">
+                                    <div>
+                                        <span class="vertical-timeline-element-icon bounce-in">
+                                            <i class="badge badge-dot badge-dot-xl badge-success"> </i>
+                                        </span>
+                                        <div class="vertical-timeline-element-content bounce-in">
+                                            <h4 class="timeline-title">Pendaftaran</h4>
+                                            <p>Batas Pendaftaran Seminar Nasional</p>
+                                            <span class="vertical-timeline-element-date">13 Okto</span>
                                         </div>
                                     </div>
                                 </div>
