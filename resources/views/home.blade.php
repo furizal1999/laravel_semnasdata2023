@@ -263,7 +263,7 @@
 
           <div class="col-lg-3 m-0 mb-4">
             <div class="client-logo">
-              <img src="{{ asset("templates") }}/assets/img/clients/sponsor.png" class="" width="150%" alt="">
+              <img src="{{ asset("templates") }}/assets/img/sponsor/scm.png" class="" width="150%" alt="">
             </div>
           </div>
 
