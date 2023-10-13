@@ -200,7 +200,16 @@
               <div class="card-body">
                 <h5 class="card-title">Seminar Nasional</h5>
                 <p>Seminar Nasional Data Science dilaksanakan secara blanded (Online dan Offline) dengan peserta mahasiswa dan umum. Kuota offline 200 peserta.</p>
-                <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Daftar</a>
+                  @php
+                      date_default_timezone_set('Asia/Jakarta');
+                      $now = new DateTime(); // Waktu saat ini
+                      $targetDate = new DateTime("2023-10-13 23:59:59"); // Tanggal target
+                  @endphp
+                  @if($now > $targetDate)
+                    <a href="#" class="readmore" class="text-danger">Pendaftaran ditutup</a>
+                  @else
+                    <a href="#" class="readmore" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Daftar</a>
+                  @endif
               </div>
             </div>
           </div>
